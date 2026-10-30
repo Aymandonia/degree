@@ -671,6 +671,15 @@ $('exportWord').onclick=async()=>{
  const button=$('exportWord');button.disabled=true;const originalLabel=button.textContent;button.textContent='جارٍ التصدير...';
  try{
   const cls=JSON.parse(JSON.stringify(current)),students=ordered(cls),title=state.title,info={...(state.info||{})},examName=current.exams?.find(e=>e.id===state.activeExamId)?.name||'';
+  const fileName=cls.name.replace(/[\\/:*?"<>|]/g,'-')+'.docx';
+  const mime='application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+  let destination=null;
+  // Open the picker during the original click, before asynchronous document generation.
+  // Browsers without the File System Access API retain the normal download flow.
+  if(window.isSecureContext&&typeof window.showSaveFilePicker==='function'){
+   try{destination=await window.showSaveFilePicker({suggestedName:fileName,types:[{description:'مستند Word',accept:{[mime]:['.docx']}}]})}
+   catch(error){if(error.name==='AbortError')return;if(error.name!=='SecurityError'&&error.name!=='NotAllowedError')throw error}
+  }
   const xml=v=>esc(String(v)).replace(/'/g,'&apos;').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\ufffe\uffff]/g,'');
   // OOXML uses twips. Fixed table grid leaves enough room for student names,
   // and equally divides the remaining width among the subjects.
@@ -707,8 +716,27 @@ $('exportWord').onclick=async()=>{
   zip.file('[Content_Types].xml','<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>');
   zip.file('_rels/.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>');
   zip.file('word/document.xml',doc);
-  const blob=await zip.generateAsync({type:'blob',mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'}),link=document.createElement('a');
-  link.href=URL.createObjectURL(blob);link.download=cls.name.replace(/[\\/:*?"<>|]/g,'-')+'.docx';link.style.display='none';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(link.href),10000);toast('تم تنزيل ملف Word');
+  const blob=await zip.generateAsync({type:'blob',mimeType:mime});
+  if(destination){
+   const writable=await destination.createWritable();
+   try{await writable.write(blob);await writable.close()}
+   catch(error){try{await writable.abort()}catch{}throw error}
+   toast('تم حفظ ملف Word');
+  }else{
+   // Android can offer installed applications for the generated document when
+   // the WebView/browser implements Web Share with file support.
+   let file=null,canOpen=false;
+   try{
+    file=new File([blob],fileName,{type:mime});
+    canOpen=typeof navigator.share==='function'&&typeof navigator.canShare==='function'&&navigator.canShare({files:[file]});
+   }catch{}
+   if(canOpen){
+    try{await navigator.share({files:[file],title:fileName});toast('تم تمرير ملف Word إلى التطبيق المختار');return}
+    catch(error){if(error.name==='AbortError')return}
+   }
+   const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=fileName;link.style.display='none';
+   document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(link.href),10000);toast('تم تنزيل ملف Word');
+  }
  }catch(error){console.error(error);toast('تعذّر إنشاء ملف Word. حاول مرة أخرى.')}
  finally{button.disabled=false;button.textContent=originalLabel}
 };
