@@ -21,8 +21,11 @@
 @media(max-width:600px){#bulkOpenExams,#bulkOpen{width:100%;min-height:48px;font-size:13px}.class-toolbar:has(#bulkOpenExams){justify-content:space-between}.class-toolbar #newExam{width:100%}}
 .word-zip-option{display:flex;align-items:center;gap:8px;color:#345b48;background:#f2f7f1;border:1px solid #d7e6d8;border-radius:10px;padding:8px 11px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}.word-zip-option input{width:18px;height:18px;margin:0;accent-color:#1f624c}.actions:has(#wordZipOption:not([hidden])){flex-wrap:wrap}.actions:has(#wordZipOption:not([hidden])) .word-zip-option{flex-basis:100%}
 @media(max-width:600px){.word-zip-option{min-height:37px;padding:6px 9px;margin-bottom:0;font-size:11px}.content{padding-bottom:165px}.toast{bottom:140px}}
+.trial-gate{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;padding:20px;background:rgba(12,34,26,.72);backdrop-filter:blur(8px);overflow-y:auto;overscroll-behavior:contain}.trial-card{position:relative;background:#fff;border:1px solid #e4ede5;border-radius:28px;box-shadow:0 32px 90px #071e2355;width:min(100%,450px);padding:29px 31px 34px;text-align:center;color:#173e2e}.trial-brand{font-weight:700;font-size:18px;color:#638675;margin-bottom:21px}.trial-lock{width:78px;height:78px;border-radius:26px;background:#eaf4ec;display:grid;place-items:center;color:#2c7754;margin:0 auto 23px;box-shadow:0 0 0 9px #f7faf6}.trial-lock svg{width:34px;height:34px;stroke-width:1.7}.trial-badge{background:#fff6e7;color:#97713a;display:inline-block;padding:5px 13px;font-size:11px;border-radius:20px;margin-bottom:11px}.trial-card h2{font-size:24px;font-weight:700;line-height:1.6;margin:0 auto 12px;max-width:340px}.trial-card p{font-size:14px;line-height:1.95;color:#657c6d;margin:0 auto 25px;max-width:290px}.trial-telegram{display:flex;align-items:center;justify-content:center;gap:11px;background:#1f624c;color:#fff;border:1px solid #1f624c;text-decoration:none;border-radius:14px;min-height:65px;padding:12px 16px;box-shadow:0 6px 18px #1f624c1a;font-size:13px;font-weight:700}.trial-telegram:hover{background:#194c3b}.trial-telegram:focus-visible{outline:3px solid #97c4ac;outline-offset:4px}.trial-telegram>svg{width:24px;height:24px}.trial-telegram bdi{display:block;font-family:Arial,sans-serif;font-size:14px;font-weight:400;margin-top:4px;letter-spacing:.2px}
+@media(max-width:420px){.trial-gate{padding:17px}.trial-card{padding:24px 20px 28px;border-radius:24px}.trial-card h2{font-size:22px}.trial-card p{font-size:13px}.trial-brand{margin-bottom:19px}.trial-lock{margin-bottom:21px}}
+@media(max-height:560px){.trial-gate{place-items:start center}.trial-card{margin-block:6px}.trial-lock{width:55px;height:55px;border-radius:18px;margin-bottom:16px}.trial-brand{margin-bottom:15px}.trial-card h2{font-size:21px}.trial-card p{margin-bottom:15px}}
 </style></head><body><svg aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg"><symbol id="glyph-book" viewBox="0 0 24 24"><path d="M12 7v13M4 5.5c3-1.5 5.7-1 8 1.5 2.3-2.5 5-3 8-1.5v13c-3-1.5-5.7-1-8 1.5-2.3-2.5-5-3-8-1.5z"/></symbol><symbol id="glyph-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M10 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="glyph-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="glyph-print" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6zM18 12h.01"/></symbol><symbol id="glyph-chart" viewBox="0 0 24 24"><path d="M4 20h16M6 16v-5M12 16V5M18 16V9"/></symbol><symbol id="glyph-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol><symbol id="glyph-icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol><symbol id="glyph-sort" viewBox="0 0 24 24"><path d="M4 7h16M7 12h10M10 17h4"/></symbol><symbol id="glyph-edit" viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l4-.8L20 7a2.8 2.8 0 0 0-4-4L4.8 16z"/></symbol><symbol id="glyph-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol><symbol id="glyph-icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol><symbol id="glyph-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11zM9 12l2 2 4-4"/></symbol><symbol id="glyph-folder" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></symbol><symbol id="glyph-back" viewBox="0 0 24 24"><path d="m14 5 7 7-7 7M21 12H3"/></symbol></svg><div class="shell"><aside class="sidebar"><div class="brand"><div class="brand-mark"><svg><use href="#glyph-book"/></svg></div><div><strong>رَصد</strong><small>مساحة المعلم</small></div></div><button class="nav-item nav-home" id="homeNav"><svg><use href="#glyph-folder"/></svg> جميع الصفوف</button><div class="nav-label classes-label">صفوفك</div><nav id="classNav" aria-label="الصفوف"></nav><button class="nav-add" id="sideCreate"><svg><use href="#glyph-plus"/></svg> إنشاء صف</button></aside>
-<main class="main"><header class="topbar"><div class="top-title"><button id="homeCrumb">الصفوف</button><span id="crumbSeparator" hidden>/</span><strong id="crumbName"></strong></div><div class="mobile-brand"><div class="brand-mark"><svg><use href="#glyph-book"/></svg></div> رَصد</div><div class="profile"><span>مساحة المعلم</span><div class="avatar" aria-hidden="true">م</div></div></header><div class="content"><div class="heading-row"><div><div class="eyebrow">صفوف منظمة، ودرجات واضحة</div><div class="title-line"><h1 id="recordTitle">سجل درجات الطلاب</h1><button class="btn btn-outline" id="infoOpen">بيانات السجل</button><button class="icon-btn" id="editTitle" aria-label="تعديل عنوان السجل" title="تعديل عنوان السجل"><svg><use href="#glyph-edit"/></svg></button></div><p class="subtitle" id="pageSubtitle">أنشئ مجلداً لكل صف وحدد مواده الدراسية.</p></div><div class="actions"><label class="word-zip-option" id="wordZipOption" hidden><input type="checkbox" id="wordZip"><span>تصدير Word داخل ملف ZIP</span></label><button class="btn btn-primary" id="createClass"><svg><use href="#glyph-plus"/></svg> إنشاء صف</button><button class="btn btn-outline" id="exportWord" hidden>تصدير Word</button><button class="btn btn-outline" id="export" hidden><svg><use href="#glyph-print"/></svg><span id="exportLabel">تصدير PDF</span></button><button class="btn btn-primary" id="add" hidden><svg><use href="#glyph-plus"/></svg> إضافة طالب</button></div></div>
+<main class="main"><header class="topbar"><div class="top-title"><button id="homeCrumb">الصفوف</button><span id="crumbSeparator" hidden>/</span><strong id="crumbName"></strong></div><div class="mobile-brand"><div class="brand-mark"><svg><use href="#glyph-book"/></svg></div> رَصد</div><div class="profile"><span>مساحة المعلم</span><div class="avatar" aria-hidden="true">م</div></div></header><div class="content"><div class="heading-row"><div><div class="eyebrow">صفوف منظمة، ودرجات واضحة</div><div class="title-line"><h1 id="recordTitle">سجل درجات الطلاب</h1><button class="btn btn-outline" id="infoOpen">بيانات السجل</button><button class="icon-btn" id="editTitle" aria-label="تعديل عنوان السجل" title="تعديل عنوان السجل"><svg><use href="#glyph-edit"/></svg></button></div><p class="subtitle" id="pageSubtitle">أنشئ مجلداً لكل صف وحدد مواده الدراسية.</p></div><div class="actions"><button class="btn btn-primary" id="createClass"><svg><use href="#glyph-plus"/></svg> إنشاء صف</button><button class="btn btn-outline" id="export" hidden><svg><use href="#glyph-print"/></svg><span id="exportLabel">تصدير PDF</span></button><button class="btn btn-primary" id="add" hidden><svg><use href="#glyph-plus"/></svg> إضافة طالب</button></div></div>
 <section id="foldersView"><div class="section-label"><h2>مجلدات الصفوف</h2><span id="folderCount"></span></div><div id="folders" class="folders-grid"></div><div class="empty folder-empty" id="foldersEmpty"><div class="empty-icon"><svg><use href="#glyph-folder"/></svg></div><h3>ابدأ بإنشاء صفك الأول</h3><p>سمِّ مجلد الصف، وأضف مواده مرة واحدة، ثم سجّل الطلاب ودرجاتهم.</p><button class="btn btn-primary" id="firstClass"><svg><use href="#glyph-plus"/></svg> إنشاء صف</button></div></section>
 <section id="examsView" hidden><div class="class-toolbar"><button class="back-btn" id="examsHome">الصفوف</button><div class="class-heading"><svg><use href="#glyph-folder"/></svg><h2 id="examsClassName"></h2></div><button class="btn btn-primary bulk-btn" id="bulkOpenExams"><svg><use href="#glyph-users"/></svg> إدراج مجموعة من الطلبة</button><button class="btn btn-outline" id="newExam">إضافة مجلد امتحان</button></div><div class="section-label"><h2>مجلدات الامتحانات</h2></div><div class="folders-grid" id="examFolders"></div></section><section id="classView" hidden><div class="class-toolbar"><button class="btn btn-primary bulk-btn" id="bulkOpen"><svg><use href="#glyph-users"/></svg> إدراج مجموعة من الطلبة</button><button class="back-btn" id="backExams">مجلدات الامتحانات</button><button class="back-btn" id="backHome"><svg><use href="#glyph-back"/></svg> الصفوف</button><div class="class-heading"><svg><use href="#glyph-folder"/></svg><h2 id="className"></h2><span id="subjectCount" class="small-chip"></span></div><button class="btn btn-outline settings-btn" id="editClass"><svg><use href="#glyph-edit"/></svg> اسم الصف والمواد</button></div>
 <section class="stats" aria-label="إحصائيات الصف"><div class="stat"><div class="stat-top">إجمالي الطلاب<div class="stat-icon"><svg><use href="#glyph-users"/></svg></div></div><div class="stat-value" id="total">0 <small>طالب</small></div></div><div class="stat"><div class="stat-top">متوسط الصف<div class="stat-icon"><svg><use href="#glyph-chart"/></svg></div></div><div class="stat-value" id="average">—</div></div><div class="stat"><div class="stat-top">أعلى متوسط<div class="stat-icon"><svg><use href="#glyph-check"/></svg></div></div><div class="stat-value" id="highest">—</div></div></section>
@@ -32,7 +35,18 @@
 <div class="dialog-backdrop" id="titleModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="titleDialogTitle"><div class="dialog-head"><h2 id="titleDialogTitle">تعديل عنوان السجل</h2><button class="icon-btn" data-close="titleModal" aria-label="إغلاق"><svg><use href="#glyph-icon-close"/></svg></button></div><form id="titleForm"><label class="field"><span>عنوان السجل</span><input id="titleInput" required maxlength="100"></label><p class="input-hint">يظهر هذا العنوان في الواجهة وتقارير PDF.</p><div class="dialog-actions"><button class="btn btn-primary" type="submit">حفظ العنوان</button><button class="btn btn-outline" type="button" data-close="titleModal">إلغاء</button></div></form></div></div>
 <div class="dialog-backdrop" id="deleteModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="deleteTitle"><div class="delete-icon"><svg><use href="#glyph-trash"/></svg></div><h2 id="deleteTitle">حذف الطالب؟</h2><p class="delete-name" id="deleteName"></p><p class="delete-copy">سيُحذف الطالب ودرجات مواده. يمكنك التراجع بعد الحذف.</p><div class="dialog-actions"><button class="btn btn-outline" data-close="deleteModal">إلغاء</button><button class="btn btn-danger" id="confirmDelete">حذف الطالب</button></div></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden><span id="toastText"></span><button id="undo" hidden>تراجع</button></div>
-<div class="dialog-backdrop" id="bulkModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="bulkTitle"><div class="dialog-head"><h2 id="bulkTitle">إدراج مجموعة من الطلبة</h2><button type="button" class="icon-btn" data-close="bulkModal" aria-label="إغلاق">×</button></div><form id="bulkForm"><label class="field"><span>اسم كل طالب في سطر مستقل</span><textarea id="bulkNames" required rows="9" placeholder="أيمن مناف ذياب&#10;أحمد كريم حسن" style="width:100%;border:1px solid #d6e1d7;border-radius:12px;padding:12px;font:inherit;resize:vertical"></textarea></label><p class="input-hint">سيُضاف كل سطر كطالب مستقل. بعد ذلك افتح مجلد الامتحان لتكتب المواد والدرجات لكل طالب.</p><div class="dialog-actions"><button class="btn btn-primary" type="submit">إضافة الكل</button><button class="btn btn-outline" type="button" data-close="bulkModal">إلغاء</button></div></form></div></div><div class="dialog-backdrop" id="infoModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="infoTitle"><div class="dialog-head"><h2 id="infoTitle">بيانات السجل</h2><button class="icon-btn" data-close="infoModal" aria-label="إغلاق">×</button></div><form id="infoForm"><label class="field"><span>اسم المدير</span><input id="director" maxlength="100"></label><label class="field"><span>اسم الأستاذ</span><input id="teacher" maxlength="100"></label><label class="field"><span>السنة الدراسية</span><input id="schoolYear" maxlength="30" placeholder="2026-2027"></label><div class="dialog-actions"><button class="btn btn-primary" type="submit">حفظ البيانات</button><button class="btn btn-outline" type="button" data-close="infoModal">إلغاء</button></div></form></div></div><script>/*!
+<div class="dialog-backdrop" id="bulkModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="bulkTitle"><div class="dialog-head"><h2 id="bulkTitle">إدراج مجموعة من الطلبة</h2><button type="button" class="icon-btn" data-close="bulkModal" aria-label="إغلاق">×</button></div><form id="bulkForm"><label class="field"><span>اسم كل طالب في سطر مستقل</span><textarea id="bulkNames" required rows="9" placeholder="أيمن مناف ذياب&#10;أحمد كريم حسن" style="width:100%;border:1px solid #d6e1d7;border-radius:12px;padding:12px;font:inherit;resize:vertical"></textarea></label><p class="input-hint">سيُضاف كل سطر كطالب مستقل. بعد ذلك افتح مجلد الامتحان لتكتب المواد والدرجات لكل طالب.</p><div class="dialog-actions"><button class="btn btn-primary" type="submit">إضافة الكل</button><button class="btn btn-outline" type="button" data-close="bulkModal">إلغاء</button></div></form></div></div><div class="dialog-backdrop" id="infoModal" hidden><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="infoTitle"><div class="dialog-head"><h2 id="infoTitle">بيانات السجل</h2><button class="icon-btn" data-close="infoModal" aria-label="إغلاق">×</button></div><form id="infoForm"><label class="field"><span>اسم المدير</span><input id="director" maxlength="100"></label><label class="field"><span>اسم الأستاذ</span><input id="teacher" maxlength="100"></label><label class="field"><span>السنة الدراسية</span><input id="schoolYear" maxlength="30" placeholder="2026-2027"></label><div class="dialog-actions"><button class="btn btn-primary" type="submit">حفظ البيانات</button><button class="btn btn-outline" type="button" data-close="infoModal">إلغاء</button></div></form></div></div>
+<div id="trialGate" class="trial-gate" role="dialog" aria-modal="true" aria-labelledby="trialTitle" aria-describedby="trialMessage">
+ <div class="trial-card">
+  <div class="trial-brand">رَصد</div>
+  <div class="trial-lock" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></div>
+  <div class="trial-badge">الفترة التجريبية</div>
+  <h2 id="trialTitle">تم انتهاء الفترة التجريبية</h2>
+  <p id="trialMessage">للاستمرار تواصل مع المطور على تليجرام</p>
+  <a id="trialTelegram" class="trial-telegram" href="https://t.me/Ayman_donia" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 3-5 18-6-7-7-3 18-8ZM10 14l11-11"/></svg><span>تواصل مع المطور <bdi dir="ltr">@Ayman_donia</bdi></span></a>
+ </div>
+</div>
+<script>/*!
 
 JSZip v3.10.1 - A JavaScript class for generating and reading zip files
 <http://stuartk.com/jszip>
@@ -524,7 +538,7 @@ function startNavigation(){
 function averageCell(s,c){const m=mean(s,c);return m===null?`<span class="pending">غير مكتمل <small><bdi dir="ltr">${completion(s,c)} / ${c.subjects.length}</bdi> مواد</small></span>`:`<span class="grade">${num(m)} <span>/ 100</span></span>`}
 function render(){
  const cls=active();if(cls)ensureExams(cls);const exam=cls?.exams?.find(e=>e.id===state.activeExamId);$('recordTitle').textContent=state.title;document.title='رَصد | '+state.title;
- document.querySelector('.actions').hidden=!!cls&&!exam;$('foldersView').hidden=!!cls;$('examsView').hidden=!cls||!!exam;$('classView').hidden=!exam;$('createClass').hidden=!!cls;$('add').hidden=!exam;$('export').hidden=!exam;$('exportWord').hidden=!exam;$('wordZipOption').hidden=!exam;$('wordZip').checked=!!state.wordZip;
+ document.querySelector('.actions').hidden=!!cls&&!exam;$('foldersView').hidden=!!cls;$('examsView').hidden=!cls||!!exam;$('classView').hidden=!exam;$('createClass').hidden=!!cls;$('add').hidden=!exam;$('export').hidden=!exam;
  $('crumbSeparator').hidden=!cls;$('crumbName').textContent=cls?.name||'';
  $('pageSubtitle').textContent=cls?'أسماء المواد محفوظة لهذا الصف، ومتوسط كل طالب يُحسب تلقائياً.':'أنشئ مجلداً لكل صف وحدد مواده الدراسية.';
  $('homeNav').classList.toggle('selected',!cls);
@@ -668,93 +682,29 @@ $('bulkOpen').onclick=openBulk;$('bulkOpenExams').onclick=openBulk;
 $('bulkForm').onsubmit=e=>{e.preventDefault();const cls=active();let added=0;for(const line of $('bulkNames').value.split(/\r?\n/)){const name=line.trim();if(!name)continue;cls.students.push({id:uid(),name,grades:Object.fromEntries(cls.subjects.map(s=>[s.id,null]))});added++}const saved=persist();render();hideModal('bulkModal');if(saved)toast(`تمت إضافة ${added} طالب`)};
 $('infoOpen').onclick=()=>{const x=state.info||{};$('director').value=x.director||'';$('teacher').value=x.teacher||'';$('schoolYear').value=x.schoolYear||'';showModal('infoModal','director')};
 $('infoForm').onsubmit=e=>{e.preventDefault();state.info={director:$('director').value.trim(),teacher:$('teacher').value.trim(),schoolYear:$('schoolYear').value.trim()};const saved=persist();hideModal('infoModal');if(saved)toast('تم حفظ بيانات السجل')};
-$('wordZip').onchange=()=>{state.wordZip=$('wordZip').checked;persist()};
-$('exportWord').onclick=async()=>{
- const current=active();
- if(!current?.students.length){toast('أضف طالباً واحداً على الأقل لتصدير الصف.');return}
- const button=$('exportWord');button.disabled=true;const originalLabel=button.textContent;button.textContent='جارٍ التصدير...';
- try{
-  const cls=JSON.parse(JSON.stringify(current)),students=ordered(cls),title=state.title,info={...(state.info||{})},examName=current.exams?.find(e=>e.id===state.activeExamId)?.name||'';
-  const docxName=cls.name.replace(/[\\/:*?"<>|]/g,'-')+'.docx';
-  const compressed=!!state.wordZip,wordMime='application/vnd.openxmlformats-officedocument.wordprocessingml.document';
-  const fileName=compressed?docxName.slice(0,-5)+'.zip':docxName,mime=compressed?'application/zip':wordMime;
-  const fileLabel=compressed?'ملف ZIP':'ملف Word';
-  let destination=null;
-  // Open the picker during the original click, before asynchronous document generation.
-  // Browsers without the File System Access API retain the normal download flow.
-  if(window.isSecureContext&&typeof window.showSaveFilePicker==='function'){
-   try{destination=await window.showSaveFilePicker({suggestedName:fileName,types:[{description:compressed?'ملف ZIP يحتوي على مستند Word':'مستند Word',accept:{[mime]:[compressed?'.zip':'.docx']}}]})}
-   catch(error){if(error.name==='AbortError')return;if(error.name!=='SecurityError'&&error.name!=='NotAllowedError')throw error}
-  }
-  const xml=v=>esc(String(v)).replace(/'/g,'&apos;').replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\ufffe\uffff]/g,'');
-  // OOXML uses twips. Fixed table grid leaves enough room for student names,
-  // and equally divides the remaining width among the subjects.
-  const pageWidth=16838,margin=600,tableWidth=pageWidth-margin*2,nameWidth=3000,numberWidth=520,averageWidth=1050;
-  const para=(v,{size=18,bold=false,color='263E31',align='center',after=0,bidi=true}={})=>{
-   const pr=`<w:pPr>${bidi?'<w:bidi/>':''}<w:jc w:val="${align}"/><w:spacing w:before="0" w:after="${after}"/></w:pPr>`;
-   const rpr=`<w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/><w:sz w:val="${size}"/><w:szCs w:val="${size}"/><w:color w:val="${color}"/>${bold?'<w:b/><w:bCs/>':''}${bidi?'<w:rtl/>':''}</w:rPr>`;
-   return `<w:p>${pr}<w:r>${rpr}<w:t xml:space="preserve">${xml(v)}</w:t></w:r></w:p>`;
-  };
-  const cell=(value,width,{header=false,fill='FFFFFF',number=false}={})=>`<w:tc><w:tcPr><w:tcW w:w="${width}" w:type="dxa"/><w:vAlign w:val="center"/><w:shd w:val="clear" w:fill="${header?'DFECE2':fill}"/></w:tcPr>${para(value,{size:header?17:18,bold:header,color:header?'27553F':'263E31',bidi:!number})}</w:tc>`;
-  const groups=[],groupSize=Math.max(1,Math.ceil(cls.subjects.length/Math.ceil(Math.max(1,cls.subjects.length)/10)));
-  if(!cls.subjects.length)groups.push([]);else for(let i=0;i<cls.subjects.length;i+=groupSize)groups.push(cls.subjects.slice(i,i+groupSize));
-  const titleBlock=groupIndex=>{
-   const groupLabel=groups.length>1?`المواد: ${groupIndex+1} / ${groups.length}`:'';
-   const metadata=[info.schoolYear&&`السنة الدراسية: \u200E${info.schoolYear}\u200E`,info.director&&`المدير: ${info.director}`,info.teacher&&`الأستاذ: ${info.teacher}`].filter(Boolean).join('    |    ');
-   return para(title,{size:30,bold:true,color:'1F624C',after:100})+para(cls.name+(examName?' — '+examName:''),{size:21,bold:true,after:100})+(metadata?para(metadata,{size:18,color:'516A5A',after:100}):'')+(groupLabel?para(groupLabel,{size:17,color:'516A5A',after:100}):'');
-  };
-  const tables=groups.map((subjects,groupIndex)=>{
-   const remain=tableWidth-nameWidth-numberWidth-averageWidth,each=subjects.length?Math.floor(remain/subjects.length):0;
-   // With no subjects, let the name column use the extra space.
-   const widths=[numberWidth,subjects.length?nameWidth:nameWidth+remain,...subjects.map((_,i)=>each+(i===subjects.length-1?remain-each*subjects.length:0)),averageWidth];
-   const headers=['م','اسم الطالب',...subjects.map(s=>s.name),'المتوسط'];
-   const head='<w:tr><w:trPr><w:tblHeader/><w:cantSplit/></w:trPr>'+headers.map((h,i)=>cell(h,widths[i],{header:true})).join('')+'</w:tr>';
-   const rows=students.map((student,index)=>{
-    const avg=mean(student,cls),values=[String(index+1),student.name,...subjects.map(sub=>validGrade(student.grades[sub.id])?num(student.grades[sub.id]):'—'),avg===null?'—':num(avg)];
-    const fill=index%2?'F3F8F3':'FFFFFF';return '<w:tr><w:trPr><w:cantSplit/></w:trPr>'+values.map((v,i)=>cell(v,widths[i],{fill,number:i===0||i>=2})).join('')+'</w:tr>';
-   }).join('');
-   const grid=widths.map(w=>`<w:gridCol w:w="${w}"/>`).join('');
-   const table=`<w:tbl><w:tblPr><w:bidiVisual/><w:tblW w:w="${tableWidth}" w:type="dxa"/><w:tblLayout w:type="fixed"/><w:tblCellMar><w:top w:w="90" w:type="dxa"/><w:bottom w:w="90" w:type="dxa"/><w:left w:w="45" w:type="dxa"/><w:right w:w="45" w:type="dxa"/></w:tblCellMar><w:tblBorders><w:top w:val="single" w:sz="4" w:color="C9DACE"/><w:left w:val="single" w:sz="4" w:color="C9DACE"/><w:bottom w:val="single" w:sz="4" w:color="C9DACE"/><w:right w:val="single" w:sz="4" w:color="C9DACE"/><w:insideH w:val="single" w:sz="4" w:color="DCE8DF"/><w:insideV w:val="single" w:sz="4" w:color="DCE8DF"/></w:tblBorders></w:tblPr><w:tblGrid>${grid}</w:tblGrid>${head}${rows}</w:tbl>`;
-   return (groupIndex?'<w:p><w:r><w:br w:type="page"/></w:r></w:p>':'')+titleBlock(groupIndex)+table;
-  }).join('');
-  const doc=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>${tables}<w:sectPr><w:pgSz w:w="${pageWidth}" w:h="11906" w:orient="landscape"/><w:pgMar w:top="650" w:right="${margin}" w:bottom="650" w:left="${margin}" w:header="300" w:footer="300" w:gutter="0"/></w:sectPr></w:body></w:document>`;
-  const zip=new JSZip();
-  zip.file('[Content_Types].xml','<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>');
-  zip.file('_rels/.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>');
-  zip.file('word/document.xml',doc);
-  const docx=await zip.generateAsync({type:'blob',mimeType:wordMime});
-  let blob=docx;
-  if(compressed){
-   const archive=new JSZip();archive.file(docxName,await docx.arrayBuffer());
-   blob=await archive.generateAsync({type:'blob',mimeType:mime,compression:'DEFLATE',compressionOptions:{level:6}});
-  }
-  if(destination){
-   const writable=await destination.createWritable();
-   try{await writable.write(blob);await writable.close()}
-   catch(error){try{await writable.abort()}catch{}throw error}
-   toast(`تم حفظ ${fileLabel}`);
-  }else{
-   // Android can offer installed applications for the generated document when
-   // the WebView/browser implements Web Share with file support.
-   let file=null,canOpen=false;
-   try{
-    file=new File([blob],fileName,{type:mime});
-    canOpen=typeof navigator.share==='function'&&typeof navigator.canShare==='function'&&navigator.canShare({files:[file]});
-   }catch{}
-   if(canOpen){
-    try{await navigator.share({files:[file],title:fileName});toast(`تم تمرير ${fileLabel} إلى التطبيق المختار`);return}
-    catch(error){if(error.name==='AbortError')return}
-   }
-   if(typeof window.rasdSaveBlob==='function')window.rasdSaveBlob(blob,fileName);
-   else{
-    const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=fileName;link.style.display='none';
-    document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(link.href),40000);
-   }
-   toast('تم طلب التنزيل. تحقق من نافذة الحفظ أو إشعار التنزيل.');
-  }
- }catch(error){console.error(error);toast('تعذّر تصدير الملف. حاول مرة أخرى.')}
- finally{button.disabled=false;button.textContent=originalLabel}
-};
 $('export').onclick=exportPDF;render();startNavigation();
+})();
+</script><script>(()=>{
+ const gate=document.getElementById('trialGate');
+ const contact=document.getElementById('trialTelegram');
+ // This notice is always shown; no local-storage dismissal flag is used.
+ const lockBackground=()=>{
+  for(const sibling of document.body.children){
+   if(sibling!==gate&&sibling.tagName!=='SCRIPT'&&sibling.tagName!=='SVG')sibling.inert=true;
+  }
+ };
+ lockBackground();
+ window.addEventListener('popstate',lockBackground);
+ window.addEventListener('pageshow',lockBackground);
+ document.documentElement.style.overflow='hidden';
+ document.body.style.overflow='hidden';
+ contact.focus({preventScroll:true});
+ document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation()}
+  if(event.key==='Tab'){event.preventDefault();contact.focus({preventScroll:true})}
+ },true);
+ document.addEventListener('focusin',event=>{
+  if(!gate.contains(event.target))contact.focus({preventScroll:true});
+ },true);
 })();
 </script></body></html>
